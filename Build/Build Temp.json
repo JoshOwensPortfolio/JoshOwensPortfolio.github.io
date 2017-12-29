@@ -1,9 +1,11 @@
 {
-"TOTAL_MEMORY": 536870912,
+"companyName": "DefaultCompany",
+"productName": "Josh",
 "dataUrl": "Build Temp.data.unityweb",
 "asmCodeUrl": "Build Temp.asm.code.unityweb",
 "asmMemoryUrl": "Build Temp.asm.memory.unityweb",
 "asmFrameworkUrl": "Build Temp.asm.framework.unityweb",
+"TOTAL_MEMORY": 536870912,
 "graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
 "webglContextAttributes": {"preserveDrawingBuffer": false},
 "splashScreenStyle": "Dark",
