@@ -1,183 +1,80 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Joshua Owens</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        background-color: black;
-      }
+<link rel = "stylesheet" href = "styles/newindex.css">
+<link rel = "stylesheet" href = "styles/socialbuttons.css">
+<link rel = "stylesheet" href="styles/tiles.css">
+<link rel = "stylesheet" href="styles/video.css">
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto|Do+Hyeon" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-      #gameContainer canvas {
-        display:block;
-      }
+<title>Joshua Owens</title>
+</head>
 
-      div#webgl-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
+<body>
 
-      div#loadingBox {
-        width: 100%;
-        height: 0px;
-        position: absolute;
-        top: 50%;
-        margin-top: 137px;
-        text-align: center;
-      }
+<script src = "js/template.js" type = "text/javascript"></script>
+<script src = "js/smoothscroll.js" type = "text/javascript"></script>
 
-      div#icon {
-        width: 300px;
-        height: 310px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -185px;
-        margin-left: -150px;
-        box-shadow: 1px 1px 5px #141414;
-      }
+<div id = "navarea">
+		<script type = "text/javascript">makeNavbar(); </script>	
+</div>	
 
-      div#box {
-        width: 328px;
-        height: 367px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -199px;
-        margin-left: -164px;
-        background: #222;
-        box-shadow: 1px 1px 5px #000;
-      }
+<div class = "shader">
+<div id = "videowrapper" >
+<div class="innerdark">
+</div>
 
-      div#bgBar {
-        display: none;
-        position: absolute;
-        width: 300px;
-        margin-left: -150px;
-        left: 50%;
-        height: 18px;
-        background-color: #882121;
-        box-shadow: 1px 1px 5px #111;
-      }
+<video autoplay muted loop>
+<source src="videos/test.mp4" type="video/mp4">
+</video>
 
-      div#progressBar {
-        display: none;
-        left: 50%;
-        position: absolute;
-        margin-left: -150px;
-        width: 0px;
-        height: 18px;
-        background-color: #dc4241;
-      }
+</div>
+</div>
 
-      p#loadingInfo {
-        color: #fff;
-        letter-spacing: 1px;
-        position: absolute;
-        width: 100%;
-        font-family: sans-serif;
-        text-align: center;
-        top: 50%;
-        font-size: 11px;
-        font-weight: 500;
-        margin-top: 140px;
-        text-shadow: 0px 0px 5px #000;
-      }
+<div id="about"></div>
+<div class="main" style="overflow: auto">
+      
 
-      div#spinner {
-        position: absolute;
-        height: 18px;
-        left: 50%;
-        margin-left: -150px;
-        width: 300px;
-        position: relative;
-        overflow: hidden;
-        background-color: #882121;
-        box-shadow: 1px 1px 5px #111;
-      }
+<h1 style="text-align: center;"></h1>
 
-      div#spinner:before {
-        display: block;
-        position: absolute;
-        content: "";
-        width: 150%;
-        margin-left: -10px;
-        height: 10px;
-        background-color: #e85352;
-        transform: rotate(-5deg);
-        animation: loading 1s linear infinite;
-      }
 
-      @keyframes loading {
-        from {
-          top: -185%
-        }
-        to {
-          top: 225%
-        }
-      }
-    </style>
-    <script src="TemplateData/UnityProgress.js"></script>  
-    <script src="Build/UnityLoader.js"></script>
-    <script src='https://cdn1.kongregate.com/javascripts/kongregate_api.js'>
-    </script>
-    <script>
-      function UnityProgress(gameInstance, progress) {
-        var container = document.getElementById('gameContainer');
-        if (container) document.body.style.background = container.style.background;
+<div style="width: 90%; max-width: 1200px; margin:50px auto 0 auto; margin-top: 100px; margin-bottom: 100px;">
+        <h1 style="font-size: 50px; margin-bottom: 50px">About</h1>
+           <p>I'm an aspiring game developer currently attending the University of Maryland as a Computer Science Major. In addition to game development, I have a passion for data science and networking. This site is meant to showcase the projects I'm currently working on, and serve as a digital archive of my works to date. It's an active work in progress; apologies in advance if you encounter bugs or other issues.</p>
+           
+        
+           </div>
+        
 
-        if (!gameInstance.Module) {
-           return;
-        } else if (progress === "complete") {
-          document.getElementById("loadingBox").style.display = "none";
-          document.getElementById("icon").style.display = "none";
-          document.getElementById("loadingInfo").style.display = "none";
-          document.getElementById("box").style.display = "none";
-          return;
-        } else if (progress == 1) {
-          document.getElementById("loadingInfo").innerHTML = "PROCESSING...";
-          document.getElementById("spinner").style.display = "inherit";
-          document.getElementById("bgBar").style.display = "none";
-          document.getElementById("progressBar").style.display = "none";
-        } else if (progress > 0) {
-          document.getElementById("progressBar").style.width = 300 * progress + "px"
-          document.getElementById("loadingInfo").innerHTML = Math.round(progress * 100) + "%";
-          document.getElementById("spinner").style.display = "none";
-          document.getElementById("bgBar").style.display = "block";
-          document.getElementById("progressBar").style.display = "inherit";
-        }
-      }
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Build.json", {
-        onProgress: UnityProgress,
-        Module: {
-          onRuntimeInitialized: function() { UnityProgress(gameInstance, "complete") }
-        }
-      });
-    </script>
-  </head>
-  <body>    
-    <div id="box"></div>
-    <div id="loadingBox">
-      <div id="spinner"></div>
-      <div id="bgBar"></div>
-      <div id="progressBar"></div>
-    </div>
-    <div class="webgl-content" style="width: 100%; height: 100%; position: absolute; ">
-      <div id="gameContainer" style="width: 100%; height: 100%; margin: 0px;"></div>
-    </div>
-   <div id="icon">
-      <video width="300" height="310" autoplay loop>
-        <source src="Template/Loading.mp4" type="video/mp4">
-      </video>    
-   </div> 
-    <p id="loadingInfo"></p>
-  </body>
+  
+</div>
+
+<div id = "games"> 
+  <h1>Games</h1>
+  
+  <div class = "game" id = "gravitygolf">
+    <img src="images/gravitygolf.png">
+  </div>
+  <div class = "game-description" id="ggdescription">
+  <h2>Cubus</h2>
+  <p>
+    Cubus is a procedurally generated 2D physics-based platformer where the objective is to explore a procedurally generated cave until you reach your goal, all while avoiding enemies that spawn throughout the cave. I've been working on Cubus for two years now, and I'm expecting to publish it on Android and iOS by February of 2019. 
+  </p>
+  </div>
+
+</div>
+    
+<div id = "footer">
+  <h2>Contact</h2>
+  <p>Email: <a href = "mailto:owensj2921@gmail.com">owensj2921@gmail.com</a> | LinkedIn: <a href="linkedin.com/in/owensj2921">linkedin.com/in/owensj2921</a> | GitHub: <a href="https://github.com/clevertoucan">https://github.com/clevertoucan</a></p>
+</div>	
+
+</body>
 </html>
