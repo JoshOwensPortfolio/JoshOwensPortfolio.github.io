@@ -5,13 +5,13 @@ function makeNavbar(){
 	"<nav class='navbar navbar-inverse'> " + 
 		"<div class='container-fluid'>" + 
 			"<div class='navbar-header'>" + 
-				"<a class='navbar-brand' onclick=\"doScrolling(\'#videowrapper\', 1000)\" style='font-size: 30px;'>Joshua Owens</a>" +
+				"<a class='navbar-brand' href = '#videowrapper' onclick=\"doScrolling(\'#videowrapper\', 1000)\" style='font-size: 30px;'>Joshua Owens</a>" +
 			"</div>" +
 			"<div class='collapse navbar-collapse float_right' id='myNavbar'>" +
 				"<ul class='nav navbar-nav'>" + 
-					"<li><a onclick=\"doScrolling(\'#about\', 1000)\">About</a></li>" + 
-					"<li><a onclick=\"doScrolling(\'#games-marker\', 1000)\">Projects</a></li>" + 
-					"<li><a onclick=\"doScrolling(\'#footer\', 1000)\">Contact</a></li>" + 
+					"<li><a href = '#about' onclick=\"doScrolling(\'#about\', 1000)\">About</a></li>" + 
+					"<li><a href = '#games-marker' onclick=\"doScrolling(\'#games-marker\', 1000)\">Projects</a></li>" + 
+					"<li><a href = '#footer' onclick=\"doScrolling(\'#footer\', 1000)\">Contact</a></li>" + 
 				"</ul>" + 
 			"</div>" + 
 		"</div>" + 
