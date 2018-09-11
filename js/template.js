@@ -10,7 +10,7 @@ function makeNavbar(){
 			"<div class='collapse navbar-collapse float_right' id='myNavbar'>" +
 				"<ul class='nav navbar-nav'>" + 
 					"<li><a onclick=\"doScrolling(\'#about\', 1000)\">About</a></li>" + 
-					"<li><a onclick=\"doScrolling(\'#games\', 1000)\">Projects</a></li>" + 
+					"<li><a onclick=\"doScrolling(\'#games-marker\', 1000)\">Projects</a></li>" + 
 					"<li><a onclick=\"doScrolling(\'#footer\', 1000)\">Contact</a></li>" + 
 				"</ul>" + 
 			"</div>" + 
