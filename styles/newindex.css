@@ -398,17 +398,17 @@ video {
 }
 
 .game {
-
 }
 
-.game img {
+.game img, .game video {
     min-width: 100%;
 }
 
 .game-description {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-top: 50px;
+    padding-bottom: 50px;
 }
 
 .game-description p {
