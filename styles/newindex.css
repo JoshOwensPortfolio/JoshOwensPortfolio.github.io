@@ -325,9 +325,7 @@ padding-top: 50px;
 
 
 video {
-    min-height: 100%;
-    z-index: 2;
-    min-width: 100vw;   
+    z-index: 2; 
 }
 
 @media only screen and (max-width: 768px) {
@@ -401,7 +399,7 @@ video {
 }
 
 .game img, .game video {
-    min-width: 100%;
+    width: 100%;
 }
 
 .game-description {
