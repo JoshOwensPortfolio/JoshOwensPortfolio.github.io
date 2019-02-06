@@ -1,2 +1,2 @@
-# umdgdc.github.io
-A portfolio/website for the UMD Game Developers Club
+# JoshOwensPortfolio.github.io
+My personal professional website portfolio
